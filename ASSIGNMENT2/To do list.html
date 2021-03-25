@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        div{
+            width:300px;
+            height:400px;
+            border:1px solid skyblue;
+            background-color: purple;
+            position: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h3 id="a">Task1</h3>
+        <ul>
+                
+        </ul>
+        <form>
+            <input type="checkbox" name=""  onclick="del1()">
+        </form>
+    </div>
+
+    <div>
+        <h3 id="b">Task2</h3>
+        <ul>
+                
+        </ul>
+        <form>
+            <input type="checkbox" name=""  onclick="del2()">
+            
+        </form>
+    </div>
+    <div>
+        <h3 id="c">Task3</h3>
+        <ul>
+                
+        </ul>
+        <form>
+            <input type="checkbox" name=""  onclick="del3()">
+        </form>
+    </div>
+    <div>
+        <h3 id="d">Task4</h3>
+        <ul>
+                
+        </ul>
+        <form>
+            <input type="checkbox" name=""  onclick="del4()">
+        </form>
+    </div>
+
+
+
+
+    <textarea name="" id="t1" cols="30" rows="10"></textarea>
+    <button id="btn1">Add </button>
+    
+
+
+    <script>
+ function del1()
+ {
+   
+// document.getElementById('a').innerHTML ='<strike>'+$('#a').val()+'<strike>';
+  document.getElementById('a').innerHTML ='<del>'+'Task1'+'<del>';
+ } 
+ 
+ function del2()
+ {
+   
+
+  document.getElementById('b').innerHTML ='<del>'+'Task2'+'<del>';
+ } 
+
+ function del3()
+ {
+   
+
+  document.getElementById('c').innerHTML ='<del>'+'Task3'+'<del>';
+ } 
+
+ function del4()
+ {
+   
+
+  document.getElementById('d').innerHTML ='<del>'+'Task4'+'<del>';
+ } 
+
+
+
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('ul').append('<li>'+$('#t1').val()+'</li>')
+            });
+           
+        });
+    </script>
+
+
+</body>
+</html>
