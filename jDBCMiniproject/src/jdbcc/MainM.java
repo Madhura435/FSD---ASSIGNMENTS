@@ -28,8 +28,8 @@ public static void main(String[] args) throws Exception {
 	String m="No";
 	do
 	{
-	System.out.println("please select any one option 1.insert 2.update"
-			+ " 3. delete 4.get");
+	System.out.println("please select any one option \n1.insert 2.update"
+			+ " 3. delete 4.get Employee by id  5. list of Employees");
 	option=s.nextInt();
 		switch(option)
 		{
@@ -66,6 +66,14 @@ public static void main(String[] args) throws Exception {
 			break;
 		}
 		case 4:
+		{
+			System.out.println("Please enter Employee id");
+			int y=s.nextInt();
+			Employee e=dao.getEmployeeById(y);
+			System.out.println(e);
+			break;
+		}
+		case 5:
 		{
 			System.out.format("%-15s %-15s %-15s\n","EId","EName","Email"); 
 			List<Employee> r=dao.getEmployees();
