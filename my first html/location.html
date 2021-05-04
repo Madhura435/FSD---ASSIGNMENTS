@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getCurrentLocation()">Get location</button>
+    <script>
+        function getCurrentLocation()
+        {
+            if(navigator.geolocation)
+            {
+               //alert("we can use geolocation");
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            }
+            else
+            {
+                alert("sorry your browser not support this feature");
+            }
+        }
+         function showPosition(position)
+         {
+             var lattitud=position.coords.latitude;
+             var longitude=position.coords.longitude;
+             alert('lattitude: '+lattitud+", longitude"+longitude);
+             //alert("madhura");
+         }
+
+         function showError(error)
+         {
+             switch(error.code)
+             {
+                 case error.PERMISSION_DENIED:
+                     alert('permission denied');
+                     break;
+                     case error.POSITION_UNAVAILABLE:
+                     alert('position unavailble');
+                     break;
+                     case error.TIMEOUT:
+                     alert('timeout');
+                     break;
+                     case error.UNKNOWN_ERROR:
+                     alert('error unknown');
+                     break;  
+             }
+         }
+    </script>
+</body>
+</html>
