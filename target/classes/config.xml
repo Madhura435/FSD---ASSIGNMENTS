@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!--<bean class="com.madhura_ness.spring_Ness.Employee" name="employee1">
+   
+     <property name="id">
+   <value>101</value>
+   </property>
+   <property name="name">
+   <value>madhura</value>
+   </property>
+   <property name="email">
+   <value>madhura@gmail.com</value>
+   </property>
+   
+   
+   </bean>-->
+   
+  
+   <bean class="com.madhura_ness.spring_Ness.Employee" name="employee1" p:id="101" p:name="john" p:email="john@gmail.com">
+   </bean>
+   <bean class="com.madhura_ness.spring_Ness.Employee" name="employee2" p:id="102" p:name="mark" p:email="mark@gmail.com">
+   </bean>
+
+<bean class="com.madhura_ness.spring_Ness.Test" name="test1">
+<property name="id" value="100"></property>
+<property name="name" value="some name"></property>
+<property name="list">
+<list>
+<value>list item1</value>
+<value>list item2</value>
+<value>list item3</value>
+</list>
+</property>
+<property name="set">
+<set>
+<value>set item 1</value>
+<value>set item 2</value>
+<value>set item 3</value>
+</set>
+</property>
+
+<property name="map">
+<map>
+<entry key="key1" value="value1"></entry>
+<entry key="key2" value="value2"></entry>
+<entry key="key3" value="value3"></entry>
+</map>
+</property>
+
+
+</bean>
+
+
+<!-- <bean class="com.madhura_ness.spring_Ness.Address" name="address1">
+<property name="houseNo" value="house1"></property>
+<property name="city" value="city1"></property>
+<property name="Country" value="country1"></property>
+</bean>
+
+<bean class="com.madhura_ness.spring_Ness.Student" name="student1">
+<property name="id" value="101"></property>
+<property name="name" value="madhura"></property>
+<property name="email" value="ma@gmail.com"></property>
+<property name="address">
+<ref bean="address1"></ref>
+</property>
+
+</bean> -->
+<!-- <bean class="com.madhura_ness.spring_Ness.Customer" name="customer1">
+<constructor-arg value="101" />
+<constructor-arg value="john" />
+<constructor-arg value="john@gmail.com" />
+</bean>
+
+<bean class="com.madhura_ness.spring_Ness.Address" name="address2">
+<constructor-arg value="house no 2" />
+<constructor-arg value="city 2" />
+<constructor-arg value="country 2" />
+</bean>
+
+<bean class="com.madhura_ness.spring_Ness.School" name="school1">
+<constructor-arg value="201" />
+<constructor-arg value="school name 1" />
+<constructor-arg ref="address2" />
+</bean>
+
+<bean class="com.madhura_ness.spring_Ness.Caluculator" name="calculator1">
+<constructor-arg value="11" />
+<constructor-arg value="56" />
+</bean>
+
+<bean class="com.madhura_ness.spring_Ness.Caluculator" name="calculator2">
+<constructor-arg value="11" type="double" index="1"/>
+<constructor-arg value="56" type="double" index="0"/>
+</bean>
+
+<bean class="com.madhura_ness.spring_Ness.Caluculator" name="calculator3">
+<constructor-arg value="11" type="int" index="0"/>
+<constructor-arg value="56" type="int" index="1"/>
+</bean>
+
+<bean class="com.madhura_ness.spring_Ness.Caluculator" name="calculator4">
+<constructor-arg value="11" type="String" index="0"/>
+<constructor-arg value="56" type="String" index="1"/>
+</bean>
+ -->
+
+<bean class="com.madhura_ness.spring_Ness.EmployeeBean" name="employee4"
+init-method="init" destroy-method="destroy">
+
+<property name="id" value="1" />
+<property name="name" value="john" />
+<property name="email" value="j@gmail.com" />
+</bean>
+
+
+<bean class="com.madhura_ness.spring_Ness.StudentBean" name="student4">
+
+<property name="id" value="1" />
+
+<property name="name" value="mark" />
+<property name="email" value="m@gmail.com" />
+
+</bean>
+
+</beans>
+
+
+
+
